@@ -1,3 +1,4 @@
+--  Abdullah Abdallah, October 18, IT202, Phase 2, aaa@njit.edu
 --Increment Category ID's by 100
 
 INSERT INTO jpcCategories (jpcCategoryID, jpcCategoryCode, jpcCategoryName, jpcCategoryDesc, DateCreated) VALUES (

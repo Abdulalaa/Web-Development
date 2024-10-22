@@ -1,3 +1,4 @@
+-- Abdullah Abdallah, October 18, IT202, Phase 2, aaa@njit.edu
 CREATE TABLE jpcProducts (
     jpcProductID           INT(11)         NOT NULL,
     jpcProductCode         VARCHAR(10)     NOT NULL    UNIQUE,

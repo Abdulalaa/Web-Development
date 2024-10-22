@@ -1,4 +1,5 @@
 <?php
+//Abdullah Abdallah, October 18, IT202, Phase 2, aaa@njit.edu
 include("jpcCategory.php");
 $jpcCategoryID = $_GET['jpcCategoryID'];
 if ((trim($jpcCategoryID) == '') or (!is_numeric($jpcCategoryID))) {

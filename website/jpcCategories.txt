@@ -1,0 +1,11 @@
+Create Categories
+http://localhost:3000/addJpcCategory.test.php?jpcCategoryID=100&jpcCategoryCode=CB&jpcCategoryName=ComicBooks&jpcCategoryDesc=All%20genres%20of%20manga,%20or%20Japanese%20black%20and%20white%20comic%20books.%20Complete%20box%20sets%20and%20series,%20not%20individual%20volumes.
+
+Update Categories
+http://localhost:3000/changeJpcCategory.test.php?jpcCategoryID=100&jpcCategoryCode=CmcBk&jpcCategoryName=ComicBooks&jpcCategoryDesc=All%20genres%20of%20manga,%20or%20Japanese%20black%20and%20white%20comic%20books.%20Complete%20box%20sets%20and%20series,%20not%20individual%20volumes.
+
+Delete Categories
+http://localhost:3000/removeJpcCategory.test.php?jpcCategoryID=100
+
+Verify Delete/List Categories
+http://localhost:3000/listJpcCategory.test.php

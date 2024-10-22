@@ -1,0 +1,11 @@
+Create Product
+http://localhost:3000/addJpcProduct.test.php?jpcProductID=20&jpcProductCode=SP&jpcProductName=Stamps&jpcProductDescription=Vintage%20stamps%20from%20Japan&jpcProductYear=1934&jpcCategoryID=100&jpcWholesalePrice=100&jpcListPrice=120
+
+Update Product
+http://localhost:3000/changeJpcProduct.test.php?jpcProductID=20&jpcProductCode=SP&jpcProductName=Stamps&jpcProductDescription=Vintage%20stamps%20from%20Japan&jpcProductYear=1934&jpcCategoryID=100&jpcWholesalePrice=100&jpcListPrice=120
+
+Delete Product
+http://localhost:3000/removeJpcProduct.test.php?jpcProductID=20
+
+Confirm delete or list Products
+http://localhost:3000/listJpcProduct.test.php

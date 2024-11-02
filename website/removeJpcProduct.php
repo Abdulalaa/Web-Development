@@ -1,10 +1,25 @@
 <?php
-//Abdullah Abdallah, October 18, IT202, Phase 2, aaa@njit.edu
+/**
+ * Abdullah Abdallah
+ * Fall 2024
+ * IT-114
+ * IT-202 Project
+ * 
+ * Handles product deletion from the system.
+ * Called from: Product list or detail views
+ * Uses: jpcProduct class for database operations
+ */
+
 include("jpcProduct.php");
+
+// Get product ID from URL parameters
 $jpcProductID = $_GET['jpcProductID'];
+
+// Attempt to find the product
 $product = jpcProduct::findProduct($jpcProductID);
 
 if ($product) {
+    // Attempt to remove the product
     $result = $product->removeProduct();
     
     if ($result) {

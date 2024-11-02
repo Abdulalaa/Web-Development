@@ -1,6 +1,6 @@
 --Abdullah Abdallah, October 4, IT202 Section 005, Phase 1: Login/Logout, aaa@njit.edu
 
--- Create managers table for login  
+-- Create managers table for login information
 CREATE TABLE jpcManagers (
     jpcManagerID   INT(11)       NOT NULL   AUTO_INCREMENT,
     emailAddress   VARCHAR(255)  NOT NULL   UNIQUE,

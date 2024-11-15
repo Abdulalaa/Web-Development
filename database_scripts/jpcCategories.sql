@@ -14,5 +14,3 @@ CREATE TABLE jpcCategories (
 -- Select all records from the jpcCategories table
 -- This command will display all categories after they are added to the table
 SELECT * FROM jpcCategories;
-
- 

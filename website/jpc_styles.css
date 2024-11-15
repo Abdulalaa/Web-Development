@@ -1,0 +1,149 @@
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    font-size: 80%;
+    color: #2c3e50;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+    background-color: #f5f6fa;
+    line-height: 1.6;
+}
+
+h1 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 140%;
+    color: #192a56;
+    margin: 0px;
+    padding: 0px;
+    font-weight: 700;
+}
+
+h2 {
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-size: 130%;
+    color: #273c75;
+    margin: 0px;
+    padding: 0px;
+    font-weight: 600;
+}
+
+h3 {
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-size: 120%;
+    color: #40739e;
+    margin: 0px;
+    padding: 0px;
+    font-weight: 500;
+}
+
+h4 {
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-size: 110%;
+    color: #487eb0;
+    margin: 0px;
+    padding: 0px;
+    font-weight: 500;
+}
+
+header {
+    padding: 15px;
+    border-bottom: 1px solid #dcdde1;
+    height: 40px;
+    width: 100%;
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+}
+
+main {
+    padding: 20px;
+    border-top: none;
+    float: left;
+    width: 55%;
+    background-color: #ffffff;
+}
+
+main table {
+    padding: 4px;
+}
+
+main td {
+    padding: 8px;
+}
+
+nav {
+    padding: 15px;
+    border: none;
+    background-color: #dfe6e9;
+    width: 20%;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.15);
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    clear: both;
+    text-align: center;
+    padding: 15px;
+    border: none;
+    background-color: #2d3436;
+    color: #ffffff;
+    width: 100%;
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.15);
+}
+
+a {
+    color: #0984e3;
+    text-decoration: none;
+}
+
+a:link {
+    color: #0984e3;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #6c5ce7;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #00b894;
+    text-decoration: none;
+}
+
+input {
+    border: 1px solid #b2bec3;
+    padding: 8px;
+    border-radius: 4px;
+}
+
+input[type=submit] {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #00b894;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #00cec9;
+}
+
+input:required:invalid {
+    border: 1px solid #d63031;
+}
+
+input:required:valid {
+    border: 1px solid #00b894;
+}
+
+input:focus {
+    background-color: #ffffff;
+    border-color: #0984e3;
+    box-shadow: 0 0 0 3px rgba(9,132,227,0.2);
+    outline: none;
+}

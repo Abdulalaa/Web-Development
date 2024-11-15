@@ -1,3 +1,4 @@
+
 <?php
 /**
  * Abdullah Abdallah
@@ -16,7 +17,10 @@ include("jpcProduct.php");
 $products = jpcProduct::getProducts();
 
 echo "<h2>Current Products:</h2>\n";
+?>
 
+<div style="max-height: 400px; overflow-y: auto; border: 1px solid #E2EAEF; padding: 10px; margin-bottom: 50px;">
+<?php
 // Check if any products were found
 if ($products) {
     // Display each product in the list
@@ -29,3 +33,5 @@ if ($products) {
     echo "<h2>No products found.</h2>\n"; 
 }
 ?>
+</div>
+

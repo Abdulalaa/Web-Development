@@ -20,52 +20,60 @@ if (!isset($_POST['jpcProductID']) or (!is_numeric($_POST['jpcProductID']))) {
     <?php
 } else {
     // Find the product to update
-    $jpcProductID = $_POST['jpcProductID'];
+    $jpcProductID = htmlspecialchars($_POST['jpcProductID']);
     $product = jpcProduct::findProduct($jpcProductID);
     
     if ($product) {
         // Display update form with current product values
     ?>
-        <h2>Update Product <?php echo $product->jpcProductID; ?></h2><br>
+        <h2>Update Product <?php echo htmlspecialchars($product->jpcProductID); ?></h2><br>
         <form name="updateJpcProduct" action="jpcIndex.php" method="post">
             <!-- Form fields pre-populated with current values -->
-            <table>
+            <table cellpadding="1" border="0">
                 <tr>
                     <td>Product ID:</td>
-                    <td><?php echo $product->jpcProductID; ?></td>
+                    <td><input type="number" name="jpcProductID" size="4" min="1000" max="9999"
+                        minlength="3" maxlength="10" value="<?php echo htmlspecialchars($product->jpcProductID); ?>" required></td>
                 </tr>
                 <tr>
                     <td>Product Code:</td>
-                    <td><input type="text" name="jpcProductCode" value="<?php echo $product->jpcProductCode; ?>"></td>
+                    <td><input type="text" name="jpcProductCode" size="20" minlength="3" maxlength="10"
+                        value="<?php echo htmlspecialchars($product->jpcProductCode); ?>" required></td>
                 </tr>
                 <tr>
                     <td>Product Name:</td>
-                    <td><input type="text" name="jpcProductName" value="<?php echo $product->jpcProductName; ?>"></td>
+                    <td><input type="text" name="jpcProductName" size="50" minlength="1" maxlength="100"
+                        value="<?php echo htmlspecialchars($product->jpcProductName); ?>" required></td>
                 </tr>
                 <tr>
                     <td>Description:</td>
-                    <td><input type="text" name="jpcProductDescription" value="<?php echo $product->jpcProductDescription; ?>"></td>
+                    <td><input type="text" name="jpcProductDescription" size="50" minlength="1"
+                        value="<?php echo htmlspecialchars($product->jpcProductDescription); ?>" required></td>
                 </tr>
                 <tr>
                     <td>Year:</td>
-                    <td><input type="text" name="jpcProductYear" value="<?php echo $product->jpcProductYear; ?>"></td>
+                    <td><input type="number" name="jpcProductYear" size="4" min="1600" max="2100"
+                        value="<?php echo htmlspecialchars($product->jpcProductYear); ?>" required></td>
                 </tr>
                 <tr>
                     <td>Category ID:</td>
-                    <td><input type="text" name="jpcCategoryID" value="<?php echo $product->jpcCategoryID; ?>"></td>
+                    <td><input type="number" name="jpcCategoryID" size="4" min="100" max="999" 
+                        minlength="3" maxlength="10" value="<?php echo htmlspecialchars($product->jpcCategoryID); ?>" required></td>
                 </tr>
                 <tr>
                     <td>Wholesale Price:</td>
-                    <td><input type="text" name="jpcWholesalePrice" value="<?php echo $product->jpcWholesalePrice; ?>"></td>
+                    <td><input type="number" name="jpcWholesalePrice" size="10" min="0.01" max="99999.99" step="0.01"
+                        value="<?php echo htmlspecialchars($product->jpcWholesalePrice); ?>" required></td>
                 </tr>
                 <tr>
                     <td>List Price:</td>
-                    <td><input type="text" name="jpcListPrice" value="<?php echo $product->jpcListPrice; ?>"></td>
+                    <td><input type="number" name="jpcListPrice" size="10" min="0.01" max="99999.99" step="0.01"
+                        value="<?php echo htmlspecialchars($product->jpcListPrice); ?>" required></td>
                 </tr>
             </table><br><br>
             <input type="submit" name="answer" value="Update Product">
             <input type="submit" name="answer" value="Cancel">
-            <input type="hidden" name="jpcProductID" value="<?php echo $jpcProductID; ?>">
+            <input type="hidden" name="jpcProductID" value="<?php echo htmlspecialchars($jpcProductID); ?>">
             <input type="hidden" name="content" value="changeJpcProduct">
         </form>
     <?php

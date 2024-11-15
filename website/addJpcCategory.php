@@ -15,13 +15,15 @@ include("jpcCategory.php");
 if (isset($_SESSION['login'])) {
     // Check if form was submitted
     if (isset($_POST['jpcCategoryID'])) {
-        $jpcCategoryID = $_POST['jpcCategoryID'];
-        if ((trim($jpcCategoryID) == '') || (!is_numeric($jpcCategoryID))) {
+        $jpcCategoryID = filter_input(INPUT_POST, 'jpcCategoryID', FILTER_VALIDATE_INT);
+        if ((trim($jpcCategoryID) == '') || (!is_int($jpcCategoryID))) {
             echo "<h2>Sorry, you must enter a valid category ID number</h2>\n";
-        } else {
-            $jpcCategoryCode = $_POST['jpcCategoryCode'];
-            $jpcCategoryName = $_POST['jpcCategoryName'];
-            $jpcCategoryDesc = $_POST['jpcCategoryDesc'];
+        } else if(jpcCategory::findCategory($jpcCategoryID)) {
+            echo "<h2>Sorry, that category ID is already in use</h2>\n";
+        } else { 
+            $jpcCategoryCode = htmlspecialchars(trim($_POST['jpcCategoryCode']));
+            $jpcCategoryName = htmlspecialchars(trim($_POST['jpcCategoryName']));
+            $jpcCategoryDesc = htmlspecialchars(trim($_POST['jpcCategoryDesc']));
             $category = new jpcCategory($jpcCategoryID, $jpcCategoryCode, $jpcCategoryName, $jpcCategoryDesc);
             $result = $category->saveCategory();
             if ($result)

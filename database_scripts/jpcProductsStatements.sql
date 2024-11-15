@@ -41,3 +41,4 @@ INSERT INTO jpcProducts (jpcProductID, jpcProductCode, jpcProductName, jpcProduc
 
 SELECT * FROM jpcProducts;
 
+DELETE FROM jpcProducts;

@@ -4,7 +4,7 @@
 // Include the database connection file
 require_once('jpcDatabase.php');
 
-// Define a class to represent a category in the Japan Collectors (JPC) system
+// Define a class to represent a category in Japan Collectors 
 class jpcCategory
 {
     // Properties of the category

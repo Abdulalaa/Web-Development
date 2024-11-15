@@ -4,7 +4,7 @@
 // Include the database connection file
 require_once('jpcDatabase.php');
 
-// Define a class to represent a product in the Japan Collectors (JPC) system
+// Define a class to represent a product in Japan Collectors 
 class jpcProduct
 {
     // Properties of the product
@@ -30,7 +30,7 @@ class jpcProduct
         $this->jpcListPrice = $jpcListPrice;
     }
 
-    // Method to convert the product object to a string representation
+    // Method to convert the product object to toString
     function __toString()
     {
         return 

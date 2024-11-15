@@ -22,16 +22,22 @@
     <?php
     } else {
         // Show full navigation menu for logged-in users
-        echo "<td><h3>Welcome, " . $_SESSION['login'] . "</h3></td>\n";
+        echo "<td><h3>Welcome</h3></td>\n";
         ?>
         <!-- Navigation links section -->
         <tr>
-            <td><a href="jpcIndex.php"><strong>Home</strong></a></td>
+            <td>
+                <img src="images/home.png" alt="Home Icon" style="width: 12px; height: 12px;">&nbsp;
+                <a href="jpcIndex.php"><strong>Home</strong></a>
+            </td>
         </tr>
         
         <!-- Category Management Section -->
         <tr>
-            <td><strong>jpc Categories</strong></td>
+            <td>
+                <img src="images/categories.png" alt="Category Icon" style="width: 12px; height: 12px;">&nbsp;
+                <strong>jpc Categories</strong>
+            </td>
         </tr>
         <tr>
             <td><a href="jpcIndex.php?content=listJpcCategory"><strong>List Categories</strong></a></td>
@@ -42,7 +48,10 @@
         
         <!-- Product Management Section -->
         <tr>
-            <td><strong>jpc Products</strong></td>
+            <td>
+                <img src="images/items.png" alt="Product Icon" style="width: 12px; height: 12px;">&nbsp;
+                <strong>jpc Products</strong>
+            </td>
         </tr>
         <tr>
             <td><a href="jpcIndex.php?content=listJpcProduct"><strong>List Products</strong></a></td>
@@ -72,6 +81,12 @@
                     <input type="submit" value="Search" />
                     <input type="hidden" name="content" value="displayJpcCategory" />
                 </form>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <img src="images/logout.png" alt="Logout Icon" style="width: 12px; height: 12px;">&nbsp;
+                <a href="jpcIndex.php?content=jpcLogout"><strong>Logout</strong></a>
             </td>
         </tr>
     <?php

@@ -17,6 +17,8 @@ session_start();
 <html>
     <head>
         <title>Japan Collectors</title>
+        <link rel="stylesheet" href="jpc_styles.css">
+        <link rel="icon" type="image/png" href="images/logo.png">
     </head>
     <body>
         <header>

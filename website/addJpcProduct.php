@@ -15,18 +15,20 @@ include("jpcProduct.php");
 if (isset($_SESSION['login'])) {
     // Check if form was submitted with product ID
     if (isset($_POST['jpcProductID'])) {
-        $jpcProductID = $_POST['jpcProductID'];
-        if ((trim($jpcProductID) == '') || (!is_numeric($jpcProductID))) {
+        $jpcProductID = filter_input(INPUT_POST, 'jpcProductID', FILTER_VALIDATE_INT);
+        if ((trim($jpcProductID) == '') || (!is_int($jpcProductID))) {
             echo "<h2>Sorry, you must enter a valid product ID number</h2>\n";
+        } else if(jpcProduct::findProduct($jpcProductID)) {
+            echo "<h2>Sorry, that product ID is already in use</h2>\n";
         } else {
-            // Get all form data
-            $jpcProductCode = $_POST['jpcProductCode'];
-            $jpcProductName = $_POST['jpcProductName'];
-            $jpcProductDescription = $_POST['jpcProductDescription'];
-            $jpcProductYear = $_POST['jpcProductYear'];
-            $jpcCategoryID = $_POST['jpcCategoryID'];
-            $jpcWholesalePrice = $_POST['jpcWholesalePrice'];
-            $jpcListPrice = $_POST['jpcListPrice'];
+            // Get all form data and sanitize
+            $jpcProductCode = htmlspecialchars(trim($_POST['jpcProductCode']));
+            $jpcProductName = htmlspecialchars(trim($_POST['jpcProductName']));
+            $jpcProductDescription = htmlspecialchars(trim($_POST['jpcProductDescription']));
+            $jpcProductYear = htmlspecialchars(trim($_POST['jpcProductYear']));
+            $jpcCategoryID = htmlspecialchars(trim($_POST['jpcCategoryID']));
+            $jpcWholesalePrice = htmlspecialchars(trim($_POST['jpcWholesalePrice']));
+            $jpcListPrice = htmlspecialchars(trim($_POST['jpcListPrice']));
 
             // Create new product object
             $product = new jpcProduct(

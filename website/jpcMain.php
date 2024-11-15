@@ -7,6 +7,7 @@
 if (!isset($_SESSION['login'])) {
     // If not logged in, display the login form
 ?>
+
     <!-- HTML for the login form -->
     <h1>Please Login to Japan Collectors!</h1>
     <br>
@@ -15,12 +16,12 @@ if (!isset($_SESSION['login'])) {
     <form name="login" action="jpcIndex.php" method="post">
         <!-- Email input field -->
         <label>Email:</label>
-        <input type="text" name="emailAddress" size="25">
+        <input type="email" name="emailAddress" size="25" required>
         <br>
         <br>
         <!-- Password input field -->
         <label>Password:</label>
-        <input type="password" name="password" size="25">
+        <input type="password" name="password" size="25" required>
         <br>
         <br>
         <!-- Submit button for the form -->
@@ -35,14 +36,10 @@ if (!isset($_SESSION['login'])) {
     echo "<h1>Welcome to Japan Collectors, {$_SESSION['firstName']} {$_SESSION['lastName']}  ({$_SESSION['pronouns']})</h1>";
     echo "<h2> Inventory Manager:</h2>"
 ?>
-    <br><br>
+    <br>
     <h4>This is your category and item inventory management program</h3>
     <br>
     <br>
-    <!-- Logout option -->
-    <h5>Logout of JPC Inventory Manager:</h5>
-    <!-- Link to logout, which will likely clear the session -->
-    <a href="jpcIndex.php?content=jpcLogout"><strong>LOGOUT</strong></a>
 <?php
 }
 ?>

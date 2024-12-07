@@ -1,3 +1,23 @@
+<script language="JavaScript">
+    function listbox_dblclick() {
+        document.jpcCategory.displayJpcCategory.click();
+    }
+    function button_click(target) {
+        let userConfirmed = true;
+        if (target == 1) {
+            userConfirmed = confirm("Are you sure you want to delete this category?");
+        }
+        if (userConfirmed) {
+            if (target == 0) jpcCategory.action = "jpcIndex.php?content=displayJpcCategory";
+            if (target == 1) jpcCategory.action = "jpcIndex.php?content=removeJpcCategory";
+            if (target == 2) jpcCategory.action = "jpcIndex.php?content=updateJpcCategory";
+        }
+        else {
+            alert("Action cancelled");
+        }
+    }
+</script>
+
 <?php
 /**
  * Abdullah Abdallah
@@ -18,8 +38,8 @@ $categories = jpcCategory::getCategories();
 ?>
 
 <h2>Select Category</h2>
-<form name="categories" method="post">
-   <select name="jpcCategoryID" size="20">
+<form name="jpcCategory" method="post">
+   <select ondblclick="listbox_dblclick()" name="jpcCategoryID" size="20">
        <?php
        // Loop through each category and display its details
        foreach ($categories as $category) {
@@ -29,4 +49,8 @@ $categories = jpcCategory::getCategories();
        }
        ?>
    </select>
+   <br>
+   <input type="submit" onClick="button_click(0)" name="displayJpcCategory" value="Display">
+   <input type="submit" onClick="button_click(1)" name="deleteJpcCategory" value="Delete">
+   <input type="submit" onClick="button_click(2)" name="updateJpcCategory" value="Update">
 </form>

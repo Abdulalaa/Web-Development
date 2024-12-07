@@ -153,5 +153,44 @@ class jpcProduct
         $db->close();
         return $result;  // Return the result of the operation
     }
+    // Method to get total number of products in the database
+    static function getTotalProducts()
+    {
+        $db = getDB();  // Get database connection
+        $query = "SELECT COUNT(jpcProductID) FROM jpcProducts";
+        $result = $db->query($query);
+        $row = $result->fetch_array();
+        if ($row) {
+            return $row[0];
+        }
+        $db->close();
+        return null;  // Return null if query fails
+    }
+
+    // Method to get sum of all product list prices
+    static function getTotalListPrice() 
+    {
+        $db = getDB();  // Get database connection
+        $query = "SELECT SUM(jpcListPrice) FROM jpcProducts";
+        $result = $db->query($query);
+        $row = $result->fetch_array();
+        if ($row) {
+            return $row[0];
+        }
+        $db->close();
+        return null;  // Return null if query fails
+    }
+
+    // Method to get sum of all product wholesale prices
+    static function getTotalWholesalePrice()
+    {
+        $db = getDB();  // Get database connection
+        $query = "SELECT SUM(jpcWholesalePrice) FROM jpcProducts";
+        $result = $db->query($query);
+        $row = $result->fetch_array();
+        if ($row) {
+            return $row[0];
+        }
+    }
 }
 ?>

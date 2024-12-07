@@ -25,10 +25,19 @@ if (isset($_SESSION['login'])) {
             $jpcProductCode = htmlspecialchars(trim($_POST['jpcProductCode']));
             $jpcProductName = htmlspecialchars(trim($_POST['jpcProductName']));
             $jpcProductDescription = htmlspecialchars(trim($_POST['jpcProductDescription']));
-            $jpcProductYear = htmlspecialchars(trim($_POST['jpcProductYear']));
-            $jpcCategoryID = htmlspecialchars(trim($_POST['jpcCategoryID']));
-            $jpcWholesalePrice = htmlspecialchars(trim($_POST['jpcWholesalePrice']));
-            $jpcListPrice = htmlspecialchars(trim($_POST['jpcListPrice']));
+            $jpcProductYear = filter_var($_POST['jpcProductYear'], FILTER_VALIDATE_INT);
+            $jpcWholesalePrice = filter_var($_POST['jpcWholesalePrice'], FILTER_VALIDATE_FLOAT);
+            $jpcListPrice = filter_var($_POST['jpcListPrice'], FILTER_VALIDATE_FLOAT);
+            $jpcCategoryID = filter_var($_POST['jpcCategoryID'], FILTER_VALIDATE_INT);
+
+            // Validate price ranges
+            if ($jpcWholesalePrice <= 0 || $jpcListPrice <= 0) {
+                echo "<h2>Prices must be greater than zero</h2>\n";
+            }
+
+            if ($jpcWholesalePrice >= $jpcListPrice) {
+                echo "<h2>Wholesale price must be less than list price</h2>\n";
+            }
 
             // Create new product object
             $product = new jpcProduct(

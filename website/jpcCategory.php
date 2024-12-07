@@ -127,5 +127,18 @@ class jpcCategory
         $db->close();
         return $result;  // Return the result of the operation
     }
+    // Method to get total number of categories in the database
+    static function getTotalCategories()
+    {
+        $db = getDB();  // Get database connection
+        $query = "SELECT COUNT(jpcCategoryID) FROM jpcCategories";
+        $result = $db->query($query);
+        $row = $result->fetch_array();
+        if ($row) {
+            return $row[0];
+        }
+        $db->close();
+        return null;  // Return null if query fails
+    }
 }
 ?>

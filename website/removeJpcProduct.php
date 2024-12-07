@@ -12,22 +12,30 @@
 
 include("jpcProduct.php");
 
-// Get product ID from URL parameters
-$jpcProductID = $_GET['jpcProductID'];
+if (isset($_SESSION['login'])) {
+    if (isset($_POST['jpcProductID']) && is_numeric($_POST['jpcProductID'])) {
+        $jpcProductID = $_POST['jpcProductID'];
+        
+        // Attempt to find the product
+        $product = jpcProduct::findProduct($jpcProductID);
 
-// Attempt to find the product
-$product = jpcProduct::findProduct($jpcProductID);
-
-if ($product) {
-    // Attempt to remove the product
-    $result = $product->removeProduct();
-    
-    if ($result) {
-        echo "<h2>Product $jpcProductID removed</h2>\n";
+        // Verify product exists
+        if ($product) {
+            // Attempt to remove the product
+            $result = $product->removeProduct();
+            
+            if ($result) {
+                echo "<h2>Product $jpcProductID removed</h2>\n";
+            } else {
+                echo "<h2>Sorry, problem occurred while removing product $jpcProductID</h2>\n";
+            }
+        } else {
+            echo "<h2>Product $jpcProductID not found</h2>\n";
+        }
     } else {
-        echo "<h2>Sorry, there was a problem while removing product $jpcProductID</h2>\n";
+        echo "<h2>Invalid product ID provided</h2>\n";
     }
 } else {
-    echo "<h2>Product $jpcProductID not found</h2>\n";
+    echo "<h2>Please log in first</h2>\n";
 }
 ?>

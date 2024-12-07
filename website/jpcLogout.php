@@ -7,5 +7,5 @@ if (isset($_SESSION['login'])) {
     session_unset();
 }
 // Redirect to index
-header("Location: jpcIndex.php");
+echo "<script>window.location.href = 'jpcIndex.php';</script>";
 ?>

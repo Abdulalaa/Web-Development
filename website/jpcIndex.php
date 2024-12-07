@@ -16,6 +16,38 @@ session_start();
 <!DOCTYPE html>
 <html>
     <head>
+        <!-- JavaScript for real-time inventory updates -->
+        <script language="javascript" type="text/javascript">
+            function getRealTime() {
+                var domcategories = document.getElementById("categorycount");
+                var domproducts = document.getElementById("itemcount"); 
+                var domlistpricetotal = document.getElementById("listpricetotal");
+                var domwholesalepricetotal = document.getElementById("wholesalepricetotal");
+                var request = new XMLHttpRequest();
+                request.open("GET", "realtime.php", true);
+                
+                request.onreadystatechange = function() {
+                    if (request.readyState == 4 && request.status == 200) {
+                        try {
+                            var xmldoc = request.responseXML;
+                            if (xmldoc) {
+                                var categories = xmldoc.getElementsByTagName("categories")[0].childNodes[0].nodeValue;
+                                var products = xmldoc.getElementsByTagName("products")[0].childNodes[0].nodeValue;
+                                var listpricetotal = xmldoc.getElementsByTagName("listpricetotal")[0].childNodes[0].nodeValue;
+                                var wholesalepricetotal = xmldoc.getElementsByTagName("wholesalepricetotal")[0].childNodes[0].nodeValue;
+                                domcategories.innerHTML = categories;
+                                domproducts.innerHTML = products;
+                                domlistpricetotal.innerHTML = listpricetotal;
+                                domwholesalepricetotal.innerHTML = wholesalepricetotal;
+                            }
+                        } catch (e) {
+                            console.error("Error processing XML response:", e);
+                        }
+                    }
+                };
+                request.send();
+            }
+        </script>
         <title>Japan Collectors</title>
         <link rel="stylesheet" href="jpc_styles.css">
         <link rel="icon" type="image/png" href="images/logo.png">
@@ -35,6 +67,16 @@ session_start();
                 ?>
             </nav>
             <main>
+                <!-- Aside section for real-time inventory stats -->
+                <aside>
+                    <?php include("aside.php"); ?>
+                    <script language="javascript" type="text/javascript">
+                        // Initialize real-time updates
+                        getRealTime();
+                        // Update every 5 seconds
+                        setInterval(getRealTime, 5000);
+                    </script>
+                </aside>
                 <?php
                 // Dynamic content loading based on user requests
                 // The 'content' parameter determines which page to load

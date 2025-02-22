@@ -1,5 +1,5 @@
 # ShogunShop - Ecommerce Store
-## A CRUD-based e-commerce website project showcasing product and category management, secure user authentication, and a modular PHP code structure. Note: This project is for demonstration and learning purposes; it does not represent a live, production storefront.
+## A CRUD-based e-commerce website project showcasing product and category management, secure user authentication, and a modular PHP code structure. Note: This project is for demonstration and learning purposes
 
 ```plaintext
 ShogunShop-Ecommerce-Website/

@@ -1,6 +1,7 @@
 # ShogunShop - Ecommerce Store
 ## A CRUD-based e-commerce website project showcasing product and category management, secure user authentication, and a modular PHP code structure. Note: This project is for demonstration and learning purposes; it does not represent a live, production storefront.
 
+```plaintext
 ShogunShop-Ecommerce-Website/
 ├── database_scripts/
 │   ├── jpcCategories.sql
@@ -40,7 +41,7 @@ ShogunShop-Ecommerce-Website/
 │   ├── updateJpcCategory.php
 │   ├── updateJpcProduct.php
 │   └── README.md
-└── README.md 
+└── README.md
 
 Overview
 

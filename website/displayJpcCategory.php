@@ -1,8 +1,5 @@
 <?php
 /**
- * Abdullah Abdallah
- * Fall 2024
- * IT-202 Project
  * 
  * This file displays the details of a specific category when given a valid category ID.
  * It includes error handling for invalid or missing category IDs.

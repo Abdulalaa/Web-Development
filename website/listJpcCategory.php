@@ -20,11 +20,6 @@
 
 <?php
 /**
- * Abdullah Abdallah
- * Fall 2024
- * IT-114
- * IT-202 Project
- * 
  * Displays a list of categories in a dropdown select menu.
  * Called from: Category management views
  * Uses: jpcCategory class for data retrieval

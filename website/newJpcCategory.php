@@ -1,10 +1,5 @@
 <?php
 /**
- * Abdullah Abdallah
- * Fall 2024
- * IT-114
- * IT-202 Project
- * 
  * Form for entering new category information.
  * Called from: Category management menu
  * Submits to: addJpcCategory.php for processing

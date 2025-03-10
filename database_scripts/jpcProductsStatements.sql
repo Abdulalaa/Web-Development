@@ -1,4 +1,3 @@
--- Abdullah Abdallah, October 18, IT202, Phase 2, aaa@njit.edu
 -- Inserting products into jpcProducts
 -- productID start with 1000
 

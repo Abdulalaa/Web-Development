@@ -1,4 +1,3 @@
-Abdullah Abdallah, October 18, IT202, Phase 2, aaa@njit.edu
 Create Product
 http://localhost:3000/addJpcProduct.test.php?jpcProductID=20&jpcProductCode=SP&jpcProductName=Stamps&jpcProductDescription=Vintage%20stamps%20from%20Japan&jpcProductYear=1934&jpcCategoryID=100&jpcWholesalePrice=100&jpcListPrice=120
 

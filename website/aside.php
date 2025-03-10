@@ -1,10 +1,5 @@
 <?php
 /**
- * Abdullah Abdallah
- * Fall 2024
- * IT-114
- * IT-202 Project
- * 
  * Aside component that displays real-time inventory statistics
  * Shows total categories, products and list price sum
  * Updated via AJAX calls to realtime.php

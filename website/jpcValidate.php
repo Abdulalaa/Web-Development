@@ -1,5 +1,4 @@
 <?php
-// Abdullah Abdallah, October 4, IT202 Section 005, Phase 1: Login/Logout, aaa@njit.edu
 
 // This file handles the validation of login credentials
 

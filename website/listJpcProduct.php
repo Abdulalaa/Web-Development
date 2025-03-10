@@ -19,10 +19,6 @@
 
 <?php
 /**
- * Abdullah Abdallah
- * Fall 2024
- * IT-114
- * IT-202 Project
  * 
  * Displays a list of all products in the system.
  * Accessed from: Navigation menu

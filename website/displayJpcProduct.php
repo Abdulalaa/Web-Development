@@ -1,9 +1,5 @@
 <?php
 /**
- * Abdullah Abdallah
- * Fall 2024
- * IT-114
- * IT-202 Project
  * 
  * Displays detailed information for a single product.
  * Called from: Product search in jpcNav.php

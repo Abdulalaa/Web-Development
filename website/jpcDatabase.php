@@ -1,5 +1,4 @@
 <?php 
-// Abdullah Abdallah, October 4, IT202 Section 005, Phase 1: Login/Logout, aaa@njit.edu
 
 // File to connect code to sql server/database 
 // Other files will use 'require_once(jpcDatabase.php)' to connect

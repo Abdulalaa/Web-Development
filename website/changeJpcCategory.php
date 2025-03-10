@@ -1,9 +1,5 @@
 <?php
 /**
- * Abdullah Abdallah
- * Fall 2024
- * IT-202 Project
- * 
  * Processes the category update form submission.
  * Called from: updateJpcCategory.php form submission
  * Uses: jpcCategory class for database operations

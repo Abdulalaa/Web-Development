@@ -1,9 +1,5 @@
 <?php
-/**
- * Abdullah Abdallah
- * Fall 2024
- * IT-202 Project
- */
+
 
 // Add this line at the top to include the category class
 include("jpcCategory.php");

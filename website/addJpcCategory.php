@@ -1,8 +1,5 @@
 <?php
 /**
- * Abdullah Abdallah
- * Fall 2024
- * IT-202 Project
  * 
  * Processes the category creation form submission
  * Called from: newJpcCategory.php form submission

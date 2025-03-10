@@ -1,10 +1,5 @@
 <?php
 /**
- * Abdullah Abdallah
- * Fall 2024
- * IT-114
- * IT-202 Project
- * 
  * Handles product deletion from the system.
  * Called from: Product list or detail views
  * Uses: jpcProduct class for database operations

@@ -1,4 +1,3 @@
---  Abdullah Abdallah, October 18, IT202, Phase 2, aaa@njit.edu
 
 -- This script inserts category data into the jpcCategories table
 

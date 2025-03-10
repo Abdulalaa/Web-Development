@@ -1,10 +1,5 @@
 <?php
 /**
- * Abdullah Abdallah
- * Fall 2024
- * IT-114
- * IT-202 Project
- * 
  * Main controller file that handles all page routing and session management.
  * This file serves as the entry point for all pages in the application.
  */

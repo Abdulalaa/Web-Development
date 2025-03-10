@@ -1,5 +1,4 @@
 <?php
-// Abdullah Abdallah, October 4, IT202 Section 005, Phase 1: Login/Logout, aaa@njit.edu
 
 // This file handles the main page content, showing either a login form or a welcome page
 

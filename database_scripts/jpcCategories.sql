@@ -1,4 +1,3 @@
--- Abdullah Abdallah, October 18, IT202, Phase 2, aaa@njit.edu
 -- Table for Categories
 
 -- Create a new table named 'jpcCategories' to store category information

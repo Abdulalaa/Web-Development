@@ -1,5 +1,5 @@
 <?php
-// Abdullah Abdallah, October 18, IT202, Phase 2, aaa@njit.edu
+
 
 // Include the database connection file
 require_once('jpcDatabase.php');

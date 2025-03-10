@@ -1,10 +1,5 @@
 <?php
 /**
- * Abdullah Abdallah
- * Fall 2024
- * IT-114
- * IT-202 Project
- * 
  * Handles the product update form display.
  * Called from: jpcNav.php (search form) or listJpcProduct.php
  * Submits to: changeJpcProduct.php

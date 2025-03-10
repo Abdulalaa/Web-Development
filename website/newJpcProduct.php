@@ -1,10 +1,5 @@
 <?php
 /**
- * Abdullah Abdallah
- * Fall 2024
- * IT-114
- * IT-202 Project
- * 
  * Form for entering new product information.
  * Called from: Product management menu
  * Submits to: addJpcProduct.php for processing

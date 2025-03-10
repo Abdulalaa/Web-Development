@@ -1,10 +1,5 @@
 <?php
 /**
- * Abdullah Abdallah
- * Fall 2024
- * IT-114
- * IT-202 Project
- * 
  * Navigation menu component that changes based on user login status.
  * Provides links to all major functions of the application.
  */

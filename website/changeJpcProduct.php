@@ -1,10 +1,5 @@
 <?php
 /**
- * Abdullah Abdallah
- * Fall 2024
- * IT-114
- * IT-202 Project
- * 
  * Processes the product update form submission.
  * Called from: updateJpcProduct.php form submission
  * Uses: jpcProduct class for database operations
